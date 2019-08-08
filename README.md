@@ -3,24 +3,16 @@
 A java project simulating a pokerHand.  
 Four classes are used for this purpose:  
   
-1- A `PokerSetConstance` class including enums for the definition of cards used in the came, 
-```
-public enum CardValue {
-		Two("2", 2),
-		Three("3", 3),
-		Four("4", 4),
-		Five("5", 5),
-		Six("6", 6),
-		Seven("7", 7),
-		Eight("8", 8),
-		Nine("9", 9),
-		Ten("T", 10),
-		Jack("J", 11),
-		Queen("Q", 12),
-		King("K", 13),
-		Ace("A", 14);
-```
-rankings of the hands(see `PokerHandAnalyzer` below for ranking), and the results for comparison of poke hands.  
+1- A `PokerSetConstance` class including enums for the definition of cards used in the came. (`CardValue` and `CardSuit` enum class)  
+The characteristics of the string of cards are:
+*   A space is used as card seperator
+*   Each card consists of two characters
+*   The first character is the value of the card, valid characters are: `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `T`(en), `J`(ack), `Q`(ueen), `K`(ing), `A`(ce)
+*   The second character represents the suit, valid characters are: `S`(pades), `H`(earts), `D`(iamonds), `C`(lubs)  
+  
+class also contains an enum defining the rankings of the hands(see `PokerHandAnalyzer` below for ranking),   
+a constant number of cards that can be in a poker hand,  
+and an enum defining the results for comparison of poke hands:  
 ```
 public enum Result {
 	WIN,
@@ -32,12 +24,9 @@ public enum Result {
 2- A `PokerHand` class a constructor that accepts a string containing 5 cards:   
 ```
 PokerHand hand = new PokerHand("Ks 2h 5c Jd Td");
-```
-The characteristics of the string of cards are:
-*   A space is used as card seperator
-*   Each card consists of two characters
-*   The first character is the value of the card, valid characters are: `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `T`(en), `J`(ack), `Q`(ueen), `K`(ing), `A`(ce)
-*   The second character represents the suit, valid characters are: `S`(pades), `H`(earts), `D`(iamonds), `C`(lubs)
+```  
+The seperator character is defined in the class `PokerSetConstances`:
+``` private final static String handSplitter= " "; ```
   
 PokerHand also contains a method to compare itself to another hand and return a `Result` instance
 
