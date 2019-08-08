@@ -25,13 +25,15 @@ public enum Result {
 ```
 PokerHand hand = new PokerHand("Ks 2h 5c Jd Td");
 ```  
-The seperator character is defined in the class `PokerSetConstances`:
-``` private final static String handSplitter= " "; ```
+The seperator character is defined in the class `PokerSetConstances`:  
+``` private final static String handSplitter= " "; ```  
   
 PokerHand also contains a method to compare itself to another hand and return a `Result` instance
 
 ```	
 public Result compareWith(PokerHand hand) {
+...
+return Result.TIE;
 ...
 }
 ```
