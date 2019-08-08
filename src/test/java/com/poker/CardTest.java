@@ -24,6 +24,10 @@ public class CardTest {
 		new Card("As");
 	}
 	
+	@Test (expected = Test.None.class)
+	public void newCardAcceptsAceOfSpadesUpperCase() {
+		new Card("AS");
+	}
 		
 	@Test
 	public void givenAceOfSpadesAndQueenOfClubes_WhenComparison_ThenAceWins() {

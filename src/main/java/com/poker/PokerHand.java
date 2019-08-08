@@ -1,13 +1,13 @@
 package com.poker;
 
+import static com.poker.rules.PokerSetConstants.*;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 import com.google.common.collect.Lists;
-
-import com.poker.PokerSetConstants.Result;
-import static com.poker.PokerSetConstants.*;
 import com.poker.PokerHandAnalyzer;
+import com.poker.rules.PokerSetConstants.Result;
 
 
 public class PokerHand {

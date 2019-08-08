@@ -6,10 +6,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-//import org.eclipse.jdt.annotation.Nullable;
-
-import com.poker.PokerSetConstants.CardValue;
-import com.poker.PokerSetConstants.HandType;
+import com.poker.rules.CardValue;
+import com.poker.rules.PokerSetConstants.HandType;
 
 
 public class PokerHandAnalyzer{

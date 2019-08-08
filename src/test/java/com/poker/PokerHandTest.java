@@ -1,10 +1,9 @@
 package com.poker;
 
+import static com.poker.rules.PokerSetConstants.*;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
-
-import static com.poker.PokerSetConstants.*;
 
 
 /**

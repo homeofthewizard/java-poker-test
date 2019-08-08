@@ -1,7 +1,7 @@
 package com.poker;
 
-
-import static com.poker.PokerSetConstants.*;
+import com.poker.rules.CardSuit;
+import com.poker.rules.CardValue;
 
 
 public class Card implements Comparable<Card>{
@@ -11,22 +11,18 @@ public class Card implements Comparable<Card>{
 	public CardSuit cardSuit;
 	
 	public Card(String cardStr) {
+		if(cardStr==null || cardStr.length()!=2)
+			throw new IllegalArgumentException();
 		checkIfCardValid(cardStr);
 	}
 	
 	private void checkIfCardValid(String cardStr) {
 		
-		if(cardStr==null || cardStr.length()!=2)
-			throw new IllegalArgumentException();
-		
 		String labelStr = cardStr.substring(0, 1);
 		String suitStr = cardStr.substring(1, 2);
 		
-		if( CardValue.valueOfLabel(labelStr)==null || CardSuit.valueOfLabel(suitStr)==null )
-			throw new IllegalArgumentException();
-		
 		cardValue = CardValue.valueOfLabel(labelStr);
-		cardSuit = CardSuit.valueOfLabel(suitStr);	
+		cardSuit = CardSuit.valueOfLabel(suitStr.toLowerCase());	
 	}
 	
 
