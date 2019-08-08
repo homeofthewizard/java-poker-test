@@ -1,16 +1,10 @@
 # Poker Game Kata
 
 A java project simulating a pokerHand.  
-Four classes are used for this purpose:  
+One package and 2 other classes are used for this purpose:  
   
-1- A `PokerSetConstance` class including enums for the definition of cards used in the came. (`CardValue` and `CardSuit` enum class)  
-The characteristics of the string of cards are:
-*   A space is used as card seperator
-*   Each card consists of two characters
-*   The first character is the value of the card, valid characters are: `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `T`(en), `J`(ack), `Q`(ueen), `K`(ing), `A`(ce)
-*   The second character represents the suit, valid characters are: `S`(pades), `H`(earts), `D`(iamonds), `C`(lubs)  
-  
-class also contains an enum defining the rankings of the hands(see `PokerHandAnalyzer` below for ranking),   
+1- A package names `com.poker.rules` contains class defining the rules as the name suggests, such as `PokerSetConstance` class including   
+an enum defining the rankings of the hands(see `PokerHandAnalyzer` below for ranking),   
 a constant number of cards that can be in a poker hand,  
 and an enum defining the results for comparison of poke hands:  
 ```
@@ -21,6 +15,13 @@ public enum Result {
 }
 ```
   
+The package also contains two enums defining the type of cards to be used in the poker game (`CardValue` and `CardSuit` enum class).    
+The characteristics of the string of cards are:
+*   A space is used as card seperator
+*   Each card consists of two characters
+*   The first character is the value of the card, valid characters are: `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `T`(en), `J`(ack), `Q`(ueen), `K`(ing), `A`(ce)
+*   The second character represents the suit, valid characters are: `S`(pades), `H`(earts), `D`(iamonds), `C`(lubs)  
+
 2- A `PokerHand` class a constructor that accepts a string containing 5 cards:   
 ```
 PokerHand hand = new PokerHand("Ks 2h 5c Jd Td");
