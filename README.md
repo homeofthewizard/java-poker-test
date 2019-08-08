@@ -56,9 +56,11 @@ public int compareTo(Card card) {
   
 4- A `HandAnalyzer` class that takes a List<Card> and return a HandType that corresponds to a ranking defined below.  
 The ranking of the hands is follow the [Texas Hold'em rules](http://freepokerhoney.com/website_images/8245/poker-strategy/poker-hand-rankings.png)  
-
-
   
+  
+  
+## How To test ??  
+Test class are present under src/test/ folder. PokerHandTest class can be used to simulate a poker game.  
 Tests can be run from the command line like so:  
 `mvn test`
 
